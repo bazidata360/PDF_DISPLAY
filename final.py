@@ -39,10 +39,9 @@ if st.session_state.login_status:
         st.title("NYSE_RBS_2020")
         user_link = "https://www.alz.org/national/documents/brochure_basicsofalz_low.pdf"  # Replace with the URL of your PDF
 
-        if user_link:
     # Embed the PDF viewer using an iframe
-            st.write("PDF Viewer:")
-            st.markdown(f'<iframe src="{user_link}" width="400%" height="800"></iframe>', unsafe_allow_html=True)
+        st.write("PDF Viewer:")
+        st.markdown(f'<iframe src="{user_link}" width="400%" height="800"></iframe>', unsafe_allow_html=True)
         
     topic = st.sidebar.selectbox("Menu:", ["Home", "About"])
 
