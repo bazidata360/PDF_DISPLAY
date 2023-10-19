@@ -13,12 +13,12 @@ if st.session_state.login_status:
     def main():
         st.title('')
         
-    pdf_file_path="cv2.pdf"
-    def show_pdf(pdf_file_path):
-        with open(pdf_file_path,"wb") as f:
+
+    def show_pdf(file_path):
+        with open(file_path,"rb") as f:
             base64_pdf = base64.b64encode(f.read()).decode('utf-8')
         pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="300" height="800" type="application/pdf"></iframe>'
-        st.write(pdf_display, unsafe_allow_html=True)
+        st.markdown(pdf_display, unsafe_allow_html=True)
     
     def display_NYSE_HSBC_2021():
         st.title("NYSE_HSBC_2021")
@@ -45,12 +45,12 @@ if st.session_state.login_status:
             st.markdown(f"[{user_link}]({user_link})")
     # Embed the PDF viewer using an iframe
             st.write("PDF Viewer:")
-            st.write(f'<iframe src="{user_link}" width="400%" height="800"></iframe>', unsafe_allow_html=True)
+            st.write(f'<embed src="{user_link}" width="400%" height="800"></embed>', unsafe_allow_html=True)
         
     topic = st.sidebar.selectbox("Menu:", ["Home", "About"])
 
     if topic=='Home':
-        feature_image1 = Image.open(r'2022.PNG')
+        feature_image1 = Image.open(r'C:\Users\marba\OneDrive\Desktop\New folder (2)\streamlit_pdf_display\2022.PNG')
         with st.container():
             image_col, text_col = st.columns((1,3))
             with image_col:
@@ -65,8 +65,8 @@ if st.session_state.login_status:
         col1, col2,col3= st.columns(3)
         with col1:
             if st.button('Read PDF Tutorial',key='1'):
-                show_pdf(pdf_file_path)
-               
+                st.container()
+                display_LSE_BARC_2022()
         with col2:
             st.button('Close PDF Tutorial',key='2')                   
         with col3:
@@ -74,7 +74,7 @@ if st.session_state.login_status:
                 PDFbyte = pdf_file.read()
             st.download_button(label="Download PDF Tutorial", key='3',data=PDFbyte,file_name="LSE_BARC_2022",mime='application/octet-stream')
 
-        feature_image2 = Image.open(r'2021.PNG')
+        feature_image2 = Image.open(r'C:\Users\marba\OneDrive\Desktop\New folder (2)\streamlit_pdf_display\2021.PNG')
         with st.container():
             image_col, text_col = st.columns((1,3))
             with image_col:
@@ -98,7 +98,7 @@ if st.session_state.login_status:
             st.download_button(label="Download PDF Tutorial", key='6',data=PDFbyte,file_name="NYSE_HSBC_2021",mime='application/octet-stream')
         
         
-        feature_image3 = Image.open(r'2020.PNG')
+        feature_image3 = Image.open(r'C:\Users\marba\OneDrive\Desktop\New folder (2)\streamlit_pdf_display\2020.PNG')
         with st.container():
             image_col, text_col = st.columns((1,3))
             with image_col:
