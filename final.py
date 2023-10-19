@@ -91,7 +91,7 @@ if st.session_state.login_status:
         col4,col2,col3=st.columns(3)
         with col4:  
             if st.button('Read PDF Tutorial',key='4'):            
-                display_NYSE_HSBC_2021()
+                show_pdf('cv2.pdf');
         with col2:
             st.button('Close PDF Tutorial',key='5')                   
         with col3:
