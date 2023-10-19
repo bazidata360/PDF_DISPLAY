@@ -1,5 +1,5 @@
 import streamlit as st
-import base64
+import pybase64
 from PIL import Image
 import requests
 # Create a session state to track login status
