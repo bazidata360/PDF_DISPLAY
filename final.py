@@ -33,7 +33,7 @@ if st.session_state.login_status:
             st.markdown(f"[{user_link}]({user_link})")
     # Embed the PDF viewer using an iframe
             st.write("PDF Viewer:")
-            st.write(f'<embed src="{user_link}" width="400%" height="800"></embed>', unsafe_allow_html=True)
+            st.markdown(f'<embed src="{user_link}" width="400%" height="800"></embed>', unsafe_allow_html=True)
 
     def display_NYSE_RBS_2020():
         st.title("NYSE_RBS_2020")
