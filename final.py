@@ -50,7 +50,7 @@ if st.session_state.login_status:
     topic = st.sidebar.selectbox("Menu:", ["Home", "About"])
 
     if topic=='Home':
-        feature_image1 = Image.open(r'C:\Users\marba\OneDrive\Desktop\New folder (2)\streamlit_pdf_display\2022.PNG')
+        feature_image1 = Image.open(r'2022.PNG')
         with st.container():
             image_col, text_col = st.columns((1,3))
             with image_col:
@@ -74,7 +74,7 @@ if st.session_state.login_status:
                 PDFbyte = pdf_file.read()
             st.download_button(label="Download PDF Tutorial", key='3',data=PDFbyte,file_name="LSE_BARC_2022",mime='application/octet-stream')
 
-        feature_image2 = Image.open(r'C:\Users\marba\OneDrive\Desktop\New folder (2)\streamlit_pdf_display\2021.PNG')
+        feature_image2 = Image.open(r'2021.PNG')
         with st.container():
             image_col, text_col = st.columns((1,3))
             with image_col:
@@ -98,7 +98,7 @@ if st.session_state.login_status:
             st.download_button(label="Download PDF Tutorial", key='6',data=PDFbyte,file_name="NYSE_HSBC_2021",mime='application/octet-stream')
         
         
-        feature_image3 = Image.open(r'C:\Users\marba\OneDrive\Desktop\New folder (2)\streamlit_pdf_display\2020.PNG')
+        feature_image3 = Image.open(r'2020.PNG')
         with st.container():
             image_col, text_col = st.columns((1,3))
             with image_col:
