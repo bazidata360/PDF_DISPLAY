@@ -41,7 +41,7 @@ if st.session_state.login_status:
 
     def display_NYSE_RBS_2020():
         st.title("NYSE_RBS_2020")
-        user_link = "https://www.annualreports.com/HostedData/AnnualReportArchive/r/NYSE_RBS_2020.pdf"  # Replace with the URL of your PDF
+        user_link = "https://www.alz.org/national/documents/brochure_basicsofalz_low.pdf"  # Replace with the URL of your PDF
 
         if user_link:
             st.markdown(f"[{user_link}]({user_link})")
