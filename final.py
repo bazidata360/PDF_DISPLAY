@@ -66,11 +66,11 @@ if st.session_state.login_status:
         col1, col2,col3= st.columns(3)
         with col1:
             if st.button('Read PDF Tutorial',key='1'):
-                show_pdf('LSE_BARC_2022.pdf');
+                show_pdf('cv2.pdf');
         with col2:
             st.button('Close PDF Tutorial',key='2')                   
         with col3:
-            with open("cv2.pdf", "rb") as pdf_file:
+            with open("LSE_BARC_2022.pdf", "rb") as pdf_file:
                 PDFbyte = pdf_file.read()
             st.download_button(label="Download PDF Tutorial", key='3',data=PDFbyte,file_name="LSE_BARC_2022",mime='application/octet-stream')
 
