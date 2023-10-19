@@ -23,7 +23,7 @@ if st.session_state.login_status:
     def display_NYSE_HSBC_2021():
         st.title("NYSE_HSBC_2021")
         pdf_display = F'<iframe src="https://thomasmorestudies.org/wp-content/uploads/2020/09/Richard.pdf" width="700" height="1000" type="application/pdf"></iframe>'
-        
+        st.markdown(pdf_display, unsafe_allow_html=True)
     
     def display_LSE_BARC_2022():
         st.title("LSE_BARC_2022")
