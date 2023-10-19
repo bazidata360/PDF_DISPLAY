@@ -13,7 +13,7 @@ if st.session_state.login_status:
     def main():
         st.title('')
         
-    pdf_file_path="LSE_BARC_2022.pdf"
+    pdf_file_path="cv2.pdf"
     def show_pdf(pdf_file_path):
         with open(pdf_file_path,"rb") as f:
             base64_pdf = base64.b64encode(f.read()).decode('utf-8')
