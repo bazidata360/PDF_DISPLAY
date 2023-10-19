@@ -2,7 +2,7 @@ import streamlit as st
 import base64
 from PIL import Image
 import requests
-# Create a session state to track login status
+# Create a session state to track login statu
 if 'login_status' not in st.session_state:
     st.session_state.login_status = False
 
@@ -91,7 +91,7 @@ if st.session_state.login_status:
         col4,col2,col3=st.columns(3)
         with col4:  
             if st.button('Read PDF Tutorial',key='4'):            
-                show_pdf('cv2.pdf');
+                display_NYSE_HSBC_2021();
         with col2:
             st.button('Close PDF Tutorial',key='5')                   
         with col3:
