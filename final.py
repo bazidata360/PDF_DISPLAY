@@ -23,7 +23,7 @@ if st.session_state.login_status:
     def display_NYSE_HSBC_2021():
         st.title("NYSE_HSBC_2021")
         pdf_url = 'https://www.annualreports.com/HostedData/AnnualReportArchive/h/NYSE_HSBC_2021.pdf'
-        base64_pdf = base64.b64encode(f.pdf_url()).decode('utf-8')
+        base64_pdf = base64.b64encode(f.read()).decode('utf-8')
         pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="300" height="800" type="application/pdf"></iframe>'
         st.markdown(pdf_display, unsafe_allow_html=True)
         
