@@ -13,9 +13,9 @@ if st.session_state.login_status:
     def main():
         st.title('')
         
-
-    def show_pdf(LSE_BARC_2022.pdf):
-        with open(LSE_BARC_2022.pdf,"rb") as f:
+    pdf_file_path="LSE_BARC_2022.pdf"
+    def show_pdf(pdf_file_path):
+        with open(pdf_file_path,"rb") as f:
             base64_pdf = base64.b64encode(f.read()).decode('utf-8')
         pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="300" height="800" type="application/pdf"></iframe>'
         st.markdown(pdf_display, unsafe_allow_html=True)
@@ -65,7 +65,7 @@ if st.session_state.login_status:
         col1, col2,col3= st.columns(3)
         with col1:
             if st.button('Read PDF Tutorial',key='1'):
-                show_pdf('LSE_BARC_2022.pdf')
+                show_pdf(pdf_file_path)
                
         with col2:
             st.button('Close PDF Tutorial',key='2')                   
