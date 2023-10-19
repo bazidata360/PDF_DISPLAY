@@ -40,10 +40,9 @@ if st.session_state.login_status:
         user_link = "https://www.alz.org/national/documents/brochure_basicsofalz_low.pdf"  # Replace with the URL of your PDF
 
         if user_link:
-            st.markdown(f"[{user_link}]({user_link})")
     # Embed the PDF viewer using an iframe
             st.write("PDF Viewer:")
-            st.write(f'<embed src="{user_link}" width="400%" height="800"></embed>', unsafe_allow_html=True)
+            st.markdown(f'<iframe src="{user_link}" width="400%" height="800"></iframe>', unsafe_allow_html=True)
         
     topic = st.sidebar.selectbox("Menu:", ["Home", "About"])
 
