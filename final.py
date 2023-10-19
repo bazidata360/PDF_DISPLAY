@@ -17,7 +17,7 @@ if st.session_state.login_status:
     def show_pdf(file_path):
         with open(file_path,"rb") as f:
             base64_pdf = base64.b64encode(f.read()).decode('utf-8')
-        pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="300" height="800" type="application/pdf"></iframe>'
+        pdf_display = f'<embed src="data:application/pdf;base64,{base64_pdf}" width="300" height="800" type="application/pdf"></embed>'
         st.markdown(pdf_display, unsafe_allow_html=True)
     
     def display_NYSE_HSBC_2021():
@@ -66,7 +66,7 @@ if st.session_state.login_status:
         col1, col2,col3= st.columns(3)
         with col1:
             if st.button('Read PDF Tutorial',key='1'):
-                show_pdf('https://www.annualreports.com/HostedData/AnnualReports/PDF/LSE_BARC_2022.pdf');
+                show_pdf('cv2.pdf');
         with col2:
             st.button('Close PDF Tutorial',key='2')                   
         with col3:
