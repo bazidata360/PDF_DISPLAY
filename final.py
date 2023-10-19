@@ -22,11 +22,12 @@ if st.session_state.login_status:
     
     def display_NYSE_HSBC_2021():
         st.title("NYSE_HSBC_2021")
-        user_link = "https://www.annualreports.com/HostedData/AnnualReportArchive/h/NYSE_HSBC_2021.pdf"  # Replace with the URL of your PDF
-        if user_link:
-            st.markdown(f"[{user_link}]({user_link})")
-    # Embed the PDF viewer using an iframe
-            st.write(f'<embed src="{user_link}" width="400%" height="800"></embed>', unsafe_allow_html=True)
+        pdf_url = 'https://www.annualreports.com/HostedData/AnnualReportArchive/h/NYSE_HSBC_2021.pdf'
+        pdf_display = F'<iframe src=\"{pdf_url}\" width=\"700\" height=\"700\" type=\"application/pdf\"></iframe>'
+        st.markdown(pdf_display, unsafe_allow_html=True)
+        
+        
+    
     def display_LSE_BARC_2022():
         st.title("LSE_BARC_2022")
         user_link = "https://www.annualreports.com/HostedData/AnnualReports/PDF/LSE_BARC_2022.pdf"  # Replace with the URL of your PDF
