@@ -26,7 +26,7 @@ if st.session_state.login_status:
         if user_link:
             st.markdown(f"[{user_link}]({user_link})")
     # Embed the PDF viewer using an iframe
-            st.write(f'<embed src="{user_link}" width="400%" height="800"></embed>', unsafe_allow_html=True)
+            st.write(f'<iframe src="{user_link}" width="400%" height="800"></iframe>', unsafe_allow_html=True)
     def display_LSE_BARC_2022():
         st.title("LSE_BARC_2022")
         user_link = "https://www.annualreports.com/HostedData/AnnualReports/PDF/LSE_BARC_2022.pdf"  # Replace with the URL of your PDF
@@ -35,7 +35,7 @@ if st.session_state.login_status:
             st.markdown(f"[{user_link}]({user_link})")
     # Embed the PDF viewer using an iframe
             st.write("PDF Viewer:")
-            st.write(f'<embed src="{user_link}" width="400%" height="800"></embed>', unsafe_allow_html=True)
+            st.write(f'<iframe src="{user_link}" width="400%" height="800"></iframe>', unsafe_allow_html=True)
 
     def display_NYSE_RBS_2020():
         st.title("NYSE_RBS_2020")
@@ -45,7 +45,7 @@ if st.session_state.login_status:
             st.markdown(f"[{user_link}]({user_link})")
     # Embed the PDF viewer using an iframe
             st.write("PDF Viewer:")
-            st.write(f'<embed src="{user_link}" width="400%" height="800"></embed>', unsafe_allow_html=True)
+            st.write(f'<iframe src="{user_link}" width="400%" height="800"></iframe>', unsafe_allow_html=True)
         
     topic = st.sidebar.selectbox("Menu:", ["Home", "About"])
 
